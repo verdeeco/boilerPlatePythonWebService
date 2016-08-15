@@ -35,6 +35,7 @@ This is a boiler plate project for exposing python functionality as webservices 
 1. Go to the quick start terminal
 2. Go to the path where this project is downloaded/cloned (using usual cd commands)
 3. When inside the boilerPlatePythonWebService folder where the Dockerfile is located, type 
+
 		docker build .
 
 	

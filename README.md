@@ -22,8 +22,8 @@ This is a boiler plate project for exposing python functionality as webservices 
 	             \    \         __/
 	              \____\_______/
 	
-	docker is configured to use the default machine with IP 192.168.99.100
-	For help getting started, check out the docs at https://docs.docker.com
+		docker is configured to use the default machine with IP 192.168.99.100
+		For help getting started, check out the docs at https://docs.docker.com
 	
 	Start interactive shell
 
@@ -55,11 +55,10 @@ This is a boiler plate project for exposing python functionality as webservices 
 	<none>              <none>              f38ba9e4e61f        33 minutes ago		698.4 MB
 	
 6. Now to run it, type
-	
-	docker run -p 5000:5000 <image ID>
+		docker run -p 5000:5000 <image ID>
  
 for instance to run the first image listed above, the run command would be like	
-	docker run -p 5000:5000 963f6de58dd5
+		docker run -p 5000:5000 963f6de58dd5
  (add -d tag to make it run as a background thread)	
 	
 

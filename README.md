@@ -55,6 +55,7 @@ This is a boiler plate project for exposing python functionality as webservices 
 	<none>              <none>              f38ba9e4e61f        33 minutes ago		698.4 MB
 	
 6. Now to run it, type
+
 		docker run -p 5000:5000 image_id
  
 for instance to run the first image listed above, the run command would be like	

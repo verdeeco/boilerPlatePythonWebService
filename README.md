@@ -54,7 +54,7 @@ REPOSITORY          TAG                 IMAGE ID            CREATED     		SIZE
 
 <none>              <none>              f38ba9e4e61f        33 minutes ago		698.4 MB
 
-6. Now to run it, type
+	6. Now to run it, type
 	
 docker run -p 5000:5000 <image ID>
  
@@ -63,7 +63,7 @@ for instance to run the first image listed above, the run command would be like
  (add -d tag to make it run as a background thread)	
 	
 
-7. Once started, open your browser and go to http://<docker-ip address>:5000. Mostly the docker ip address would be 192.168.99.100. So open http://192.168.99.100:5000
+	7. Once started, open your browser and go to http://<docker-ip address>:5000. Mostly the docker ip address would be 192.168.99.100. So open http://192.168.99.100:5000
 8. If it displays a welcome message, you are done!!
 
 	

@@ -2,11 +2,19 @@ This is a boiler plate project for exposing python functionality as webservices 
 ====
 
 ## Installing Docker 
+
+#### Windows
 1. Go to https://www.docker.com/products/docker-toolbox
 2. Choose the appropriate OS and download docker tool box
 3. Install docker tool box
 
-## Making sure the installation is right and setting up the OS
+#### OSX
+1. Install homebrew http://brew.sh/
+2. Install homebrew cask https://caskroom.github.io/
+3. Install docker-toolbox using the following command: 
+   `brew cask install docker-toolbox`
+
+## Making sure the installation is right and setting up the OS (Windows Only)
 1. Go to Start->All Programs->Oracle VM VirtualBox
 2. If there is a virtual machine called default, right click and close it, then delete it by selecting remove (This is because the default VM that the installer creates doesn't use the right operating system)
 3. Go to Start->All Programs->Docker and select Docker Quickstart Terminal
@@ -32,6 +40,7 @@ This is a boiler plate project for exposing python functionality as webservices 
 
 ## Running the boiler plate code
 
+#### Windows
 1. Go to the quick start terminal
 2. Go to the path where this project is downloaded/cloned (using usual cd commands)
 3. When inside the boilerPlatePythonWebService folder where the Dockerfile is located, type 
@@ -59,14 +68,38 @@ This is a boiler plate project for exposing python functionality as webservices 
 
 		docker run -p 5000:5000 image_id
  
-for instance to run the first image listed above, the run command would be like	
+	for instance to run the first image listed above, the run command would be like	
 		docker run -p 5000:5000 963f6de58dd5
  (add -d tag to make it run as a background thread)	
-	
 
 7. Once started, open your browser and go to http://<docker-ip address>:5000. Mostly the docker ip address would be 192.168.99.100. So open http://192.168.99.100:5000
 8. If it displays a welcome message, you are done!!
 
+#### OSX
+1. Open a terminal
+2. Start the default docker machine:
+	
+		docker-machine start
+
+3. Run the following to configure your shell 
+
+ 		eval $(docker-machine env)
+ 	
+4. Clone this repository:
+
+		git clone --depth=1 https://github.com/verdeeco/boilerPlatePythonWebService.git <your-project-name>
+
+5. cd into the project root and build the docker image with `docker build .`
+6. Check to make sure the image was created with `docker images`
+7. To run the image, execute `docker run -p 5000:5000 image_id`
+8. Get the IP of your running docker host with `docker-machine env`
+
+		export DOCKER_TLS_VERIFY="1"
+		export DOCKER_HOST="tcp://192.168.99.100:2376"
+		export DOCKER_CERT_PATH="/Users/gmuller/.docker/machine/machines/default"
+		export DOCKER_MACHINE_NAME="default"
+		
+9. Navigate to `http://192.168.99.100:5000` to see the running web service
 	
 ## Editing the boiler plate code
 
